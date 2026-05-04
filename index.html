@@ -173,7 +173,7 @@
             flex-wrap: wrap;
             gap: 12px;
             justify-content: center;
-            margin: 48px 0;
+            margin: 20px 0 0 0;
         }
 
         .skill-tag {
@@ -192,7 +192,7 @@
             background: white;
             border: 1.5px solid var(--border);
             border-radius: 12px;
-            margin: 32px 0 40px;
+            margin: 48px 0 40px;
             overflow: hidden;
             max-width: 650px;
             margin-left: auto;
@@ -283,7 +283,7 @@
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 32px 0 60px;
+            margin: 32px 0 0;
         }
 
         .btn {
@@ -320,7 +320,7 @@
 
         /* Projects Section */
         .projects-section {
-            margin: 100px 0;
+            margin: 40px 0 100px;
         }
 
         .section-title {
@@ -631,6 +631,14 @@
             font-size: 16px;
         }
 
+        .target-date {
+            display: block;
+            font-size: 12px;
+            margin-top: 6px;
+            opacity: 0.85;
+            font-weight: 500;
+        }
+
         .next-items strong {
             font-weight: 700;
             opacity: 1;
@@ -722,6 +730,11 @@
                 After 6 years of Product Management at Oracle and Cisco, I'm exploring the next evolution of the role. One where PMs can build, iterate, and ship the work themselves.
             </p>
 
+            <div class="action-buttons">
+                <a href="https://raw.github.com/rileyburden3-debug/PM_portfolio/main/Riley%20Burden%20Resume.pdf" class="btn btn-primary" download="Riley_Burden_Resume.pdf">Download Resume</a>
+                <a href="https://www.linkedin.com/in/rileyburden/" target="_blank" class="btn">LinkedIn Profile</a>
+            </div>
+
             <div class="why-now-card">
                 <button class="why-now-button" onclick="toggleWhyNow(this)">
                     <span>Why Now? (or: How I realized I'm not as scared of code as I thought)</span>
@@ -732,15 +745,6 @@
                 </div>
             </div>
 
-            <div class="skills-section">
-                <p class="skills-label">My key attributes (established and learning)</p>
-                <p class="skills-list">Product Strategy, Enterprise GTM, AI/Builder PM, Cross-functional Leadership, Cloud Infrastructure, Comfort with Ambiguity</p>
-            </div>
-
-            <div class="action-buttons">
-                <a href="https://raw.github.com/rileyburden3-debug/PM_portfolio/main/Riley%20Burden%20Resume.pdf" class="btn btn-primary" download="Riley_Burden_Resume.pdf">Download Resume</a>
-                <a href="https://www.linkedin.com/in/rileyburden/" target="_blank" class="btn">LinkedIn Profile</a>
-            </div>
         </section>
 
         <!-- Projects Section -->
@@ -829,12 +833,28 @@
             <h2>What's Next</h2>
             <p>Cosmic Scale Explorer is the first of many. I'm building toward a more structured practice, with a focus on understanding how to ship full stack products with AI.</p>
             <ul class="next-items">
-                <li><strong>Expanding Cosmic Scale:</strong> Adding solar system explorer (planets and moons) with age appropriate details and audio for learning</li>
-                <li><strong>Full stack with database:</strong> Building a complete app with database, user auth, and access permissions (first PRD drafted)</li>
-                <li><strong>Workflow automation:</strong> Using Cowork to automate job search workflows and test AI for personal productivity</li>
+                <li><strong>Expanding Cosmic Scale:</strong> Adding solar system explorer (planets and moons) with age appropriate details and audio for learning<br><span class="target-date">Target completion: May 6</span></li>
+                <li><strong>Full stack with database:</strong> Building a complete app with database, user auth, and access permissions (first PRD drafted)<br><span class="target-date">Target completion: May 8</span></li>
+                <li><strong>Workflow automation:</strong> Using Cowork to automate job search workflows and test AI for personal productivity<br><span class="target-date">Target completion: May 15</span></li>
+                <li><strong>Paid app:</strong> Building and shipping an application that attracts paid users<br><span class="target-date">Target completion: May 22</span></li>
             </ul>
             <p style="margin-top: 20px;">Each project is designed to teach me something new about what builder PM means and how to scale it.</p>
         </section>
+
+        <!-- Bottom Section -->
+        <div style="margin-top: 100px; padding-top: 60px; border-top: 1px solid var(--border);">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <p class="skills-label">My key attributes (established and learning)</p>
+                <div class="skills-container">
+                    <span class="skill-tag">Product Strategy</span>
+                    <span class="skill-tag">Enterprise GTM</span>
+                    <span class="skill-tag">AI/Builder PM</span>
+                    <span class="skill-tag">Cross-functional Leadership</span>
+                    <span class="skill-tag">Cloud Infrastructure</span>
+                    <span class="skill-tag">Comfort with Ambiguity</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer>
