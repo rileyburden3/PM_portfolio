@@ -755,16 +755,17 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">Cosmic Scale Explorer</h3>
+                        <h3 class="project-title">Cosmic Explorer</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px; font-weight: 500;">The artist formerly known as Cosmic Scale Explorer</p>
                     </div>
                     <span class="project-status">Live</span>
                 </div>
 
                 <p class="project-problem">
-                    <strong>The problem:</strong> I wanted to deeply understand what building with Claude actually entails. So I built an interactive web app that lets anyone compare 70+ space objects at true to scale proportions, with AI generated fun facts for every pairing. Personal curiosity plus my 6 year old's interest in space equals a real product.
+                    <strong>The problem:</strong> I wanted to deeply understand what building with Claude actually entails. So I built an interactive web app that lets anyone compare over 100 celestial objects at true to scale proportions, with AI generated fun facts for every pairing. Personal curiosity plus my 6 year old's interest in space equals a real product.
                 </p>
 
-                <a href="https://cosmic-scale-explorer.vercel.app/?a=earth&b=jupiter" target="_blank" class="demo-link">
+                <a href="https://cosmic-explorer-update.vercel.app/?a=sun&b=earth" target="_blank" class="demo-link">
                     ✨ See Live Demo
                 </a>
 
@@ -778,10 +779,12 @@
                         <div class="detail-title">What I Built</div>
                         <div class="detail-content">
                             <ul>
-                                <li>70+ space objects (asteroids, comets, planets, stars, exoplanets, black holes)</li>
-                                <li>True scale visual comparisons with scrollable canvas for extreme size differences</li>
-                                <li>Browsable grid with filters and live search</li>
-                                <li>AI powered fun facts via Claude API (Claude Haiku)</li>
+                                <li>140+ space objects across multiple categories (asteroids, comets, planets, stars, exoplanets, black holes, and moons)</li>
+                                <li>True scale visual comparisons with step ladder for extreme size differences</li>
+                                <li>Moon Explorer tab: dedicated interface for exploring major moons of planets and dwarf planets, organized by parent body</li>
+                                <li>Browsable grid with filters, sorting controls (by size, by orbital order), and live search</li>
+                                <li>AI powered fun facts via Claude API (Claude Haiku) for every object</li>
+                                <li>Tab-based navigation (Compare, Browse, Moon Explorer) with consistent visual rendering across all tabs</li>
                                 <li>Shareable URLs so anyone can send a comparison directly</li>
                                 <li>Audio pronunciation for each object</li>
                             </ul>
@@ -792,6 +795,16 @@
                         <div class="detail-title">How I Built It and What Surprised Me</div>
                         <div class="detail-content">
                             <p>I directed Claude end to end: defining scope, making architecture decisions, iterating on UX. Claude handled all code. What surprised me most was how collaborative and intelligent the process was. Not just code output, but scaffolding the entire product (GitHub repo, Vercel deployment, API security decisions). It felt like working with an engineer, except instantaneous and without competing priorities. What would have taken me a month took hours.</p>
+                            <p style="margin-top: 12px;">For v2 specifically, the real lesson was iteration velocity. I didn't need to architect a complex solution for moons. I could polish and refine in real time. When I realized the single page interface was cramped, I pivoted to tabs. When I noticed color inconsistencies across tabs, I fixed them instantly. When sorting felt arbitrary, I standardized it. Each of these decisions would have been a day-long design process in traditional workflows. With Claude, they were minutes.</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="detail-title">The Iteration (v1 to v2)</div>
+                        <div class="detail-content">
+                            <p><strong>v1 foundation:</strong> I shipped v1 with 70+ celestial objects, true scale comparisons, and AI generated fun facts. My son used it regularly and loved it. But as he continued exploring, he started asking questions about moons: which planets have them, what are their names, how big are they? I realized he wanted deeper moon specific learning, and the single page interface wasn't set up for that. Everything scrolled in one long page, making it hard to navigate focused topics.</p>
+                            <p style="margin-top: 12px;"><strong>v2 decision:</strong> Rather than wait for him to complain, I proactively decided to expand the experience. I added a dedicated Moon Explorer tab with major moons for each planet and dwarf planet, and reorganized the entire interface into clear sections: Compare tab, Browse tab, Moon Explorer tab. The constraint of consistency forced intentional design. If I was adding tabs, every tab needed the same visual language, the same sorting logic, the same clarity. I standardized how celestial objects render across all views. I added sorting controls (by size, by orbital order). I grouped moons by parent planet in a logical sequence.</p>
+                            <p style="margin-top: 12px;"><strong>The rebuild:</strong> The whole thing took about a week (mixed with other work), and the architecture didn't need to change. This was pure UX and feature work. What surprised me: the constraint of consistency actually made the product stronger. I wasn't just adding a feature; I was elevating the entire experience. And the velocity was remarkable. I could iterate on colors, sorting, layouts, and visual consistency in real time with Claude, catching inconsistencies instantly and fixing them. Traditional PM workflows would have taken weeks for this cycle. I did it in days.</p>
                         </div>
                     </div>
 
@@ -799,9 +812,9 @@
                         <div class="detail-title">The PM Decisions That Mattered</div>
                         <div class="detail-content">
                             <ul>
-                                <li><strong>Start simple:</strong> At its core, the app just needed to show sphere size differences, names, and simple UX. A one shot prompt got us 80% there.</li>
-                                <li><strong>Architecture for security:</strong> I decided against inline API keys in the browser, opting for a serverless function instead. A decision that required understanding the trade offs Claude explained.</li>
-                                <li><strong>User as customer:</strong> I scoped based on what my 6 year old actually needed, not feature creep. That constraint made the product stronger.</li>
+                                <li><strong>Observation, not reaction:</strong> I didn't wait for complaints. I watched him use v1, noticed he was asking about moons, and proactively built the feature. This taught me the difference between reactive PM (waiting for feedback) and proactive PM (anticipating needs).</li>
+                                <li><strong>Consistency as a constraint:</strong> When I added the Moon Explorer tab, I realized every tab needed the same visual language, sorting logic, and clarity. That constraint forced me to standardize object rendering across Compare, Browse, and Moon Explorer. It made the entire product stronger, not just the new feature.</li>
+                                <li><strong>Sorting and organization matter:</strong> I added size sorting for the Browse tab, orbital order for planets, grouping by parent planet for moons. These weren't afterthoughts. They emerged from understanding how my son naturally explored the data.</li>
                             </ul>
                         </div>
                     </div>
@@ -809,20 +822,20 @@
                     <div class="detail-section">
                         <div class="detail-title">What I Would Do Differently</div>
                         <div class="detail-content">
-                            <p>I skipped the formal structure. No vision doc, no PRD, no customer discovery beyond "what does my kid want?" Next time I'll document assumptions upfront and validate them systematically. This taught me that velocity without structure is seductive but risky.</p>
+                            <p>For v1, I skipped formal discovery. No vision doc, no PRD, no conversation about requirements. It happened to work out because my son loved the core idea. But I got lucky. If I were starting over, I'd do light discovery upfront, even just asking questions: "What do you want to explore?" Then ship small, observe, and iterate based on what I see, not just what I hear. The difference between proactive observation and reactive feedback is huge, and documenting those observations early would have made the v1 to v2 transition even smoother.</p>
                         </div>
                     </div>
 
                     <div class="detail-section">
                         <div class="detail-title">What This Taught Me About Builder PM</div>
                         <div class="detail-content">
-                            <p>I realized that my insecurity about not having a technical background was a limiting belief. I don't need to code to ship products. What I need is PM discipline (scoping, user centricity, architecture thinking) plus the ability to direct an AI tool thoughtfully. That's a skill I already have. The realization opened my eyes to what's actually possible for a builder PM.</p>
+                            <p>This project crystallized something critical: builder PM is about more than just not needing to code. It's about the velocity to observe, hypothesize, and validate. In traditional PM, iterating on UX might take weeks. With Claude, it took days. That speed is a superpower if paired with good judgment. Watch your users. Notice what they need before they ask. Build proactively. Then refine relentlessly. That's builder PM in practice: observation plus velocity equals better products, faster.</p>
                         </div>
                     </div>
 
                     <div class="project-links">
-                        <a href="https://cosmic-scale-explorer.vercel.app/?a=earth&b=jupiter" target="_blank" class="project-link">Live App</a>
-                        <a href="https://github.com/rileyburden3-debug/cosmic-scale-explorer" target="_blank" class="project-link">GitHub Repo</a>
+                        <a href="https://cosmic-explorer-update.vercel.app/?a=sun&b=earth" target="_blank" class="project-link">Live App</a>
+                        <a href="https://vercel.com/rileyburden3-debugs-projects/cosmic-explorer" target="_blank" class="project-link">GitHub Repo</a>
                     </div>
                 </div>
             </div>
@@ -831,9 +844,9 @@
         <!-- What's Next -->
         <section class="whats-next">
             <h2>What's Next</h2>
-            <p>Cosmic Scale Explorer is the first of many. I'm building toward a more structured practice, with a focus on understanding how to ship full stack products with AI.</p>
+            <p>Cosmic Explorer was the first project, and it shipped. I'm building toward a more structured practice, with a focus on understanding how to ship full stack products with AI.</p>
             <ul class="next-items">
-                <li><strong>Expanding Cosmic Scale:</strong> Adding solar system explorer (planets and moons) with age appropriate details and audio for learning<br><span class="target-date">Target completion: May 8</span></li>
+                <li><span style="text-decoration: line-through; opacity: 0.6;"><strong>Expanding Cosmic Explorer:</strong> Adding moon learning features and UX polish<br><span class="target-date">Target completion: May 8</span></span> <span style="color: var(--success); font-weight: 700;">Shipped</span></li>
                 <li><strong>Full stack with database:</strong> Building a complete app with database, user auth, and access permissions (first PRD drafted)<br><span class="target-date">Target completion: May 15</span></li>
                 <li><strong>Workflow automation:</strong> Using Cowork to automate job search workflows and test AI for personal productivity<br><span class="target-date">Target completion: May 15</span></li>
                 <li><strong>Paid app:</strong> Building and shipping an application that attracts paid users<br><span class="target-date">Target completion: May 29</span></li>
