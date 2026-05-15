@@ -731,7 +731,7 @@
             </p>
 
             <div class="action-buttons">
-                <a href="https://raw.github.com/rileyburden3/PM_portfolio/main/Riley%20Burden%20Resume.pdf" class="btn btn-primary" download="Riley_Burden_Resume.pdf">Download Resume</a>
+                <a href="https://raw.github.com/rileyburden3-debug/PM_portfolio/main/Riley%20Burden%20Resume.pdf" class="btn btn-primary" download="Riley_Burden_Resume.pdf">Download Resume</a>
                 <a href="https://www.linkedin.com/in/rileyburden/" target="_blank" class="btn">LinkedIn Profile</a>
             </div>
 
@@ -839,6 +839,116 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Battle Royale Song Battle Card -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Battle Royale Song Battle</h3>
+                    </div>
+                    <span class="project-status">Live</span>
+                </div>
+
+                <p class="project-problem">
+                    <strong>The problem:</strong> [Project details coming soon]
+                </p>
+
+                <a href="https://music-battle-royale-eta.vercel.app/home" target="_blank" class="demo-link">
+                    ✨ See Live Demo
+                </a>
+
+                <button class="expand-button" onclick="toggleExpand(this)">
+                    <span>Read the full story</span>
+                    <span class="expand-icon">▼</span>
+                </button>
+
+                <div class="expanded-details">
+                    <div class="detail-section">
+                        <div class="detail-content">
+                            <p>Details coming soon.</p>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://music-battle-royale-eta.vercel.app/home" target="_blank" class="project-link">Live App</a>
+                        <a href="https://vercel.com/rileyburden3-debugs-projects/music-battle-royale" target="_blank" class="project-link">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Search Agent Card -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Job Search Agent</h3>
+                    </div>
+                    <span class="project-status">Active</span>
+                </div>
+
+                <p class="project-problem">
+                    <strong>The problem:</strong> I'm searching for my next role. Rather than manually scouring job boards, I built an AI agent that finds promising opportunities, scores them against my criteria, and generates tailored resumes and cover letters. The agent runs on a schedule, sends me curated reports, and tracks my pipeline. In other words: a personal job search operator that runs 24/7.
+                </p>
+
+                <a href="https://github.com/rileyburden3/Job_Search_Agent" target="_blank" class="demo-link">
+                    ✨ View on GitHub
+                </a>
+
+                <button class="expand-button" onclick="toggleExpand(this)">
+                    <span>Read the full story</span>
+                    <span class="expand-icon">▼</span>
+                </button>
+
+                <div class="expanded-details">
+                    <div class="detail-section">
+                        <div class="detail-title">What I Built</div>
+                        <div class="detail-content">
+                            <ul>
+                                <li>Autonomous agent that searches Indeed daily for matching roles</li>
+                                <li>Multi-dimensional role fit scoring (Experience, Title/Seniority, Geography, Salary, AI Signal, Recruiter Attention)</li>
+                                <li>Scheduled email digests with top 5 opportunities and detailed fit analysis</li>
+                                <li>Google Sheets pipeline tracker that logs 13 data points per role</li>
+                                <li>Resume and cover letter generator that tailors to job descriptions while preserving my voice</li>
+                                <li>Operating Manual (MD file) that encodes my job targeting criteria, resume rules, and decision framework</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="detail-title">How I Built It and What Surprised Me</div>
+                        <div class="detail-content">
+                            <p>I created a detailed operating manual in Markdown that became the agent's decision engine. Then I configured a Claude Cowork project with scheduled tasks (Monday/Wednesday/Friday job pulls, weekly pipeline reviews) connected to Indeed, Gmail, and Google Drive MCPs. What surprised me most was how straightforward it was to orchestrate multiple systems with clear instructions. The agent's outputs were surprisingly high quality. On the flip side, I hit some MCP limitations (Gmail couldn't auto-send, Google Sheets couldn't auto-update existing tables), but these are being addressed. The key insight: the quality of the agent is almost entirely determined by the quality of the operating manual.</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="detail-title">The PM Decisions That Mattered</div>
+                        <div class="detail-content">
+                            <ul>
+                                <li><strong>Operating Manual as the agent:</strong> Investing time in a detailed MD file with targeting criteria, honest gaps, resume rules, and scoring frameworks paid compound returns on every downstream output.</li>
+                                <li><strong>Scope ruthlessly:</strong> The problem wasn't find a job, it was find the right job. This meant limiting the search to my highest-fit opportunities and crafting tailored materials, not spraying resumes everywhere.</li>
+                                <li><strong>Define success metrics:</strong> An AI agent isn't set it and forget it. I need clear metrics to evaluate whether it's working, then iterate on the operating manual to keep it aligned.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="detail-title">What I Would Do Differently</div>
+                        <div class="detail-content">
+                            <p>Since this is a living system, I'd want to evolve it based on what I learn. Right now the scheduled digests and pipeline tracking are defined but not fully automated. As the MCP limitations lift and as I refine my targeting criteria based on real feedback from applications, I'll iterate the operating manual to keep the agent sharp.</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="detail-title">What This Taught Me About Builder PM</div>
+                        <div class="detail-content">
+                            <p>Agentic AI is achievable for non-technical builders, and with the right direction, it can dramatically amplify output. I'm getting high-quality leads, fit analysis, tailored resumes, and cover letters in 10 minutes that would take me 100+ minutes manually. But the responsibility doesn't disappear. Like a manager, I need to hold the agent accountable to success metrics and iterate when it drifts. That's builder PM for agents: clear direction, measurable outcomes, and relentless iteration.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/rileyburden3/Job_Search_Agent" target="_blank" class="project-link">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- What's Next -->
@@ -847,9 +957,10 @@
             <p>Cosmic Explorer was the first project, and it shipped. I'm building toward a more structured practice, with a focus on understanding how to ship full stack products with AI.</p>
             <ul class="next-items">
                 <li><span style="text-decoration: line-through; opacity: 0.6;"><strong>Expanding Cosmic Explorer:</strong> Adding moon learning features and UX polish<br><span class="target-date">Target completion: May 8</span></span> <span style="color: var(--success); font-weight: 700;">Shipped</span></li>
-                <li><strong>Full stack with database:</strong> Building a complete app with database, user auth, and access permissions (first PRD drafted)<br><span class="target-date">Target completion: May 15</span></li>
-                <li><strong>Workflow automation:</strong> Using Cowork to automate job search workflows and test AI for personal productivity<br><span class="target-date">Target completion: May 15</span></li>
+                <li><span style="text-decoration: line-through; opacity: 0.6;"><strong>Full stack with database:</strong> Building a complete app with database, user auth, and access permissions (first PRD drafted)<br><span class="target-date">Target completion: May 15</span></span> <span style="color: var(--success); font-weight: 700;">Shipped</span></li>
+                <li><span style="text-decoration: line-through; opacity: 0.6;"><strong>Workflow automation:</strong> Using Cowork to automate job search workflows and test AI for personal productivity<br><span class="target-date">Target completion: May 15</span></span> <span style="color: var(--success); font-weight: 700;">V1 Complete (not complete until job is found)</span></li>
                 <li><strong>Paid app:</strong> Building and shipping an application that attracts paid users<br><span class="target-date">Target completion: May 29</span></li>
+                <li><strong>Exploring Additional Agent Use Cases:</strong> Building agents for other high-value, repeatable problems beyond job search<br><span class="target-date">Target completion: TBD</span></li>
             </ul>
             <p style="margin-top: 20px;">Each project is designed to teach me something new about what builder PM means and how to scale it.</p>
         </section>
@@ -874,7 +985,7 @@
             <p>Open to conversations about Product Management roles in AI/Builder PM and beyond.</p>
             <p style="margin-top: 16px;">
                 <a href="https://www.linkedin.com/in/rileyburden/" target="_blank">LinkedIn</a> • 
-                <a href="https://github.com/rileyburden3" target="_blank">GitHub</a> • 
+                <a href="https://github.com/rileyburden3-debug" target="_blank">GitHub</a> • 
                 <a href="mailto:rileyburden3@gmail.com">Email</a>
             </p>
         </footer>
